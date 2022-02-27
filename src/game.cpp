@@ -140,7 +140,7 @@ bool game::Game::play() {
 			std::cin >> game_name;
 			std::cout << "game_name = " << game_name << std::endl;
 			if(game_name.size() > 4) {
-				std::cout << "size bigger than 4" << std::endl;
+//				std::cout << "size bigger than 4" << std::endl;
 				if (save_game(game_name)) {
 					std::cout << "Game Saved. Quitting..." << std::endl;
 				}
@@ -250,15 +250,10 @@ void game::Game::chooseCharacter() {
 
 }
 
-
-
-
-
-
 bool game::Game::save_game(std::string game_name) {	
 //	std::cout << "Inside save_game" << std::endl;
 	std::ofstream myfile;
-	game_name += ".txt";
+	game_name = "../data/" + game_name + ".txt";
 	myfile.open(game_name);
 
 	if(myfile.is_open()) {
@@ -283,7 +278,7 @@ bool game::Game::save_game(std::string game_name) {
 				}
 				//Saving all the characters at that playground
 				if(!_playground[i][j]->characters().empty()) {
-					std::cout << "inside characters\n";
+//					std::cout << "inside characters\n";
 					for(auto it = _playground[i][j]->characters().begin(); it != _playground[i][j]->characters().end(); ++it) {
 //						std::cout << "Saving " << (it)->second->name() << std::endl;
 						myfile << (it)->second->saveInfo(i,j) << "\n";

@@ -82,7 +82,6 @@ class game::Game {
 		bool save_game(std::string);
 		
 
-
 	public:
 		Game();
 		~Game();		

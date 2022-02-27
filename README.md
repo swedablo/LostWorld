@@ -1,6 +1,6 @@
 # LostWorld
 
-The initial setup of the playground is presented at "DefaultStartGame.txt". Games can be saved and loaded. To win the game a chest needs to be opened, 
+The initial setup of the playground is presented at "data/DefaultStartGame.txt". Games can be saved and loaded. To win the game a chest needs to be opened, 
 containing a portal to a safer world. To open the chest a Magical Key has to be found, hidden within the game.
 
 ### Updated Version: ###
